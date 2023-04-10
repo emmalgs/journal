@@ -20,6 +20,14 @@ Log.prototype.findEntry = function(id) {
   return false;
 };
 
+Log.prototype.deleteEntry = function(id) {
+  if (this.entries[id] === undefined) {
+    return false;
+  }
+  delete this.entries[id];
+  return true;
+}
+
 export function Entry(title, body) {
   this.title = title;
   this.body = body;

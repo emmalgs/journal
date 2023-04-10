@@ -31,7 +31,15 @@ function displayEntryDetails(event) {
   document.querySelector(".word-count").innerText = entry.wordCount();
   document.querySelector(".vowels").innerText = entry.vowels;
   document.querySelector(".consonants").innerText = entry.consonants;
+  document.querySelector("button.delete").setAttribute("id", entry.id);
   document.querySelector("div#entry-details").removeAttribute("class");
+}
+
+function handleDelete(event) {
+  log.deleteEntry(event.target.id);
+  document.querySelector("button.delete").removeAttribute("id");
+  document.querySelector("div#entry-details").setAttribute("class", "hidden");
+  listEntries(log);
 }
 
 function handleFormSubmission() {
@@ -47,6 +55,7 @@ function handleFormSubmission() {
 
 document.querySelector("form").addEventListener("submit", handleFormSubmission);
 document.querySelector("div#entries").addEventListener("click", displayEntryDetails);
+document.querySelector("button.delete").addEventListener("click", handleDelete);
 
 
 
