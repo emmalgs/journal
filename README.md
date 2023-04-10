@@ -1,3 +1,41 @@
+# Secret Journal
+
+#### By _**Emma Gerigscott**_
+
+#### _A place to hide your inner thoughts...online_
+
+## Technologies Used
+
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* npm
+* webpack
+
+## Description
+
+A project to practice structuring with Node.js. This webpage let's you put in a title for your journal entry, your journal entry, and then lists all your journal entries. When you click on your journal entry you can view details like word count, vowels, and consonants, and you can also delete your secrets if you so choose.
+
+## Setup/Installation Requirements
+
+* _Clone this repository to your desktop_
+* _Navigate to the root directory in your terminal and run ```$ npm install```_
+* _Add any additional dependencies by running in the root directory ```$ npm install [package-name]```_
+  - _include ```--save-dev``` flag if its a development dependency_
+  - _list the package version if you want, for example: ```$ npm install webpack@4.46.0 --save-dev```_
+  - _include ```--save-exact``` to save the exact version, for example ```$ npm install webpack@4.46.0 --save-dev --save-exact```_
+* _After all packages are installed, to start the project's server, in the root directory in your terminal run ```$ npm run start```_
+
+
+## Known Bugs
+
+* _You cannot actually save any of your journal entries_
+
+## License
+
+Copyright (c) 2023 Emma Gerigscott
+
 ## TDD
 
 Describe: Entry();
