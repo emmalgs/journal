@@ -26,3 +26,12 @@ export function Entry(title, body) {
     return words;
   };
 }
+
+Entry.prototype.vowelsAndConsonants = function() {
+  const vowelRegex = /[aeiou]/gi;
+  const consonantRegex = /[^aeiou\s]/gi;
+  const vowelCount = this.body.match(vowelRegex);
+  const consonantCount = this.body.match(consonantRegex);
+  this.vowels = vowelCount.length;
+  this.consonants = consonantCount.length;
+};

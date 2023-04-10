@@ -24,7 +24,15 @@ let entry = new Entry(title, body);
 entry;  
 Expected Output : { 'title': 'Day 1', 'body': 'The sea is rough today and I think I may puke.' wordCount: 11 };
 
+Describe: Entry.prototype.vowelsAndConsonants() 
 
+Test: "It should create keys vowels and consonants that count the number of vowels and consonants in the body of the entry"  
+Code: 
+const title = "Day 1"  
+const body = "The sea is rough today and I think I may puke."  
+let entry = new Entry(title, body);  
+entry.vowelsAndConsonants();
+Expected Output: { 'title': 'Day 1', 'body': 'The sea is rough today and I think I may puke.' wordCount: 11, vowels: 15, consonants: 21 };
 
 Describe: Log();
 
