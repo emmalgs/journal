@@ -9,4 +9,4 @@ let entry = new Entry(title, body);
 let log = new Log();
 log.addEntry(entry);
 
-document.getElementById("test-output").innerText = `${log.entries[1].title}: ${log.entries[1].body}`;
+document.getElementById("test-output").innerText = `${log.entries[1].title}: ${log.entries[1].body}, ${log.entries[1].wordCount()}`;
