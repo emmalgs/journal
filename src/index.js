@@ -23,6 +23,17 @@ function listEntries(logEntriesToDisplay) {
   entriesDiv.append(ul);
 }
 
+function displayEntryDetails(event) {
+  const entry = log.findEntry(event.target.id);
+  entry.vowelsAndConsonants();
+  document.querySelector(".title").innerText = entry.title;
+  document.querySelector(".body").innerText = entry.body;
+  document.querySelector(".word-count").innerText = entry.wordCount();
+  document.querySelector(".vowels").innerText = entry.vowels;
+  document.querySelector(".consonants").innerText = entry.consonants;
+  document.querySelector("div#entry-details").removeAttribute("class");
+}
+
 function handleFormSubmission() {
   event.preventDefault();
   const inputtedTitle = document.querySelector("input#title").value;
@@ -35,6 +46,7 @@ function handleFormSubmission() {
 }
 
 document.querySelector("form").addEventListener("submit", handleFormSubmission);
+document.querySelector("div#entries").addEventListener("click", displayEntryDetails);
 
 
 
