@@ -40,5 +40,12 @@ Entry.prototype.getTeaser = function() {
   const sentenceRegex = /[.]/g;
   const index = this.body.search(sentenceRegex);
   const teaser = this.body.slice(0, index);
-  return teaser + '...';
+  const textArray = teaser.split(" ");
+  if (textArray.length > 8) {
+    const shortTeaser = textArray.slice(0, 8);
+    return shortTeaser.join(' ') + '...'
+  } else {
+    return teaser + '...';
+  }
 };
+

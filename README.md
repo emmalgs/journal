@@ -44,6 +44,14 @@ let entry = new Entry(title, body);
 entry.getTeaser();
 Expected Output: "The sea is rough today and I think I may puke.";
 
+Test: "It should return the first 8 words if the sentence is longer than 8 when called on an instance of entry"  
+Code: 
+const title = "Day 1"  
+const body = "The sea is rough today and I think I may puke."  
+let entry = new Entry(title, body);  
+entry.getTeaser();
+Expected Output: "The sea is rough today and I think...";
+
 
 Describe: Log();
 
