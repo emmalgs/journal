@@ -23,5 +23,18 @@ function listEntries(logEntriesToDisplay) {
   entriesDiv.append(ul);
 }
 
-listEntries(log);
+function handleFormSubmission() {
+  event.preventDefault();
+  const inputtedTitle = document.querySelector("input#title").value;
+  const inputtedBody = document.querySelector("textarea#body").value;
+  let newEntry = new Entry(inputtedTitle, inputtedBody);
+  log.addEntry(newEntry);
+  listEntries(log);
+  document.querySelector("input#title").value = null;
+  document.querySelector("textarea#body").value = null;
+}
+
+document.querySelector("form").addEventListener("submit", handleFormSubmission);
+
+
 
