@@ -26,7 +26,7 @@ Log.prototype.deleteEntry = function(id) {
   }
   delete this.entries[id];
   return true;
-}
+};
 
 export function Entry(title, body) {
   this.title = title;

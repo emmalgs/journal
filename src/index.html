@@ -8,23 +8,25 @@
 </head>
 <body>
   <h1>My Secret Journal</h1>
-  <form>
-    <div class="input-container">
-      <label for="title">Entry title: </label>
-      <input type="text" name="title" id="title">
-      <label for="body">Journal entry: </label>
-      <textarea name="body" id="body" cols="50" rows="10"></textarea>
-      <button type="submit">Add Entry</button>
+  <div class="container">
+    <form>
+      <div class="input-container">
+        <label for="title">Entry title: </label>
+        <input type="text" name="title" id="title">
+        <label for="body">Journal entry: </label>
+        <textarea name="body" id="body" cols="50" rows="10"></textarea>
+        <button type="submit">Add Entry</button>
+      </div>
+    </form>
+    <div id="entries"></div>
+    <div id="entry-details" class="hidden">
+      <div class="title"></div>
+      <p><span class="body"></span></p>
+      <p>Word Count: <span class="word-count"></span></p>
+      <p>Vowels: <span class="vowels"></span></p>
+      <p>Consonants: <span class="consonants"></span></p>
+      <button class="delete">Delete Entry</button>
     </div>
-  </form>
-  <div id="entries"></div>
-  <div id="entry-details" class="hidden">
-    <div class="title"></div>
-    <p>Journal Entry: <span class="body"></span></p>
-    <p>Word Count: <span class="word-count"></span></p>
-    <p>Vowels: <span class="vowels"></span></p>
-    <p>Consonants: <span class="consonants"></span></p>
-    <button class="delete">Delete Entry</button>
   </div>
 </body>
 </html>
