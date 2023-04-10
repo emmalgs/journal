@@ -35,3 +35,10 @@ Entry.prototype.vowelsAndConsonants = function() {
   this.vowels = vowelCount.length;
   this.consonants = consonantCount.length;
 };
+
+Entry.prototype.getTeaser = function() {
+  const sentenceRegex = /[.]/g;
+  const index = this.body.search(sentenceRegex);
+  const teaser = this.body.slice(0, index);
+  return teaser + '...';
+};

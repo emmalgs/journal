@@ -13,4 +13,5 @@ log.addEntry(entry);
 document.getElementById("test-output").innerText = `${log.entries[1].title}: ${log.entries[1].body} 
   word Count = ${log.entries[1].wordCount()}
   vowels = ${log.entries[1].vowels}
-  consonants = ${log.entries[1].consonants}`;
+  consonants = ${log.entries[1].consonants}
+  Teaser: ${log.entries[1].getTeaser()}`;
