@@ -9,7 +9,15 @@ Log.prototype.assignEntryId = function() {
 };
 
 Log.prototype.addEntry = function(entry) {
-  this.entries[this.assignEntryId()] = entry;
+  entry.id = this.assignEntryId();
+  this.entries[entry.id] = entry;
+};
+
+Log.prototype.findEntry = function(id) {
+  if (this.entries[id] !== undefined) {
+    return this.entries[id];
+  }
+  return false;
 };
 
 export function Entry(title, body) {
@@ -43,7 +51,7 @@ Entry.prototype.getTeaser = function() {
   const textArray = teaser.split(" ");
   if (textArray.length > 8) {
     const shortTeaser = textArray.slice(0, 8);
-    return shortTeaser.join(' ') + '...'
+    return shortTeaser.join(' ') + '...';
   } else {
     return teaser + '...';
   }
